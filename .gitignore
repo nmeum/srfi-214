@@ -1,3 +1,4 @@
+tests/Flexvectors.log
 *.build.sh
 *.import.scm
 *.import.so

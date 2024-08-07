@@ -1,9 +1,8 @@
 (import (scheme base)
         (scheme write)
         (scheme process-context)
-        (flexvectors))
-
-(include "./srfi-64-minimal.scm")
+        (srfi 214)
+        (srfi 64))
 
 (test-begin "Flexvectors")
 
