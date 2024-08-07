@@ -1,4 +1,4 @@
-(define-library (flexvectors)
+(define-library (srfi 214)
   (export ; Constructors
           make-flexvector flexvector
           flexvector-unfold flexvector-unfold-right
@@ -46,5 +46,5 @@
           (srfi 1)
           (srfi 145))
 
-  (include "flexvectors-body1.scm")
-  (include "flexvectors-body2.scm"))
+  (include "implementation/flexvectors-body1.scm")
+  (include "implementation/flexvectors-body2.scm"))
