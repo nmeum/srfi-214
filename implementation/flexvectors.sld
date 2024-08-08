@@ -1,4 +1,23 @@
-(define-library (srfi 214)
+(module srfi-214 ()
+  (import scheme)
+  (import (only (chicken base)
+                case-lambda
+                define-record-type
+                error
+                include
+                let-values
+                unless
+                when)
+          (only (chicken module) export)
+          (srfi 1)
+          (only (srfi 133)
+                vector-copy
+                vector-copy!
+                vector-fill!
+                string->vector
+                vector->string)
+          (srfi 145))
+
   (export ; Constructors
           make-flexvector flexvector
           flexvector-unfold flexvector-unfold-right
@@ -39,12 +58,6 @@
           vector->flexvector list->flexvector string->flexvector
           reverse-flexvector->list reverse-list->flexvector
           generator->flexvector flexvector->generator)
-
-  (import (scheme base)
-          (scheme case-lambda)
-          (scheme write)
-          (srfi 1)
-          (srfi 145))
 
   (include "implementation/flexvectors-body1.scm")
   (include "implementation/flexvectors-body2.scm"))

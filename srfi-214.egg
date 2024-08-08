@@ -7,9 +7,8 @@
  (synopsis "SRFI 241: Flexvectors")
  (version "1.0.1")
  (category data)
- (component-options (csc-options "-d3" "-O3" "-X" "r7rs" "-R" "r7rs"))
  (test-dependencies srfi-64)
- (dependencies r7rs srfi-1 srfi-145)
+ (dependencies srfi-1 srfi-133 srfi-145)
  (components
    (extension srfi-214
      (source "srfi-214.scm")

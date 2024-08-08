@@ -414,4 +414,4 @@
         (let ((element (flexvector-ref fv i)))
           (set! i (+ i 1))
           element)
-        (eof-object)))))
+        #!eof))))
