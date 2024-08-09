@@ -6,5 +6,5 @@
   (when (or
           (not (zero? (test-runner-fail-count runner)))
           (not (zero? (test-runner-xpass-count runner)))
-          (not (zero? (test-runner-skip-count runner))))
+          (not (zero? (test-runner-xfail-count runner))))
     (exit 1)))
