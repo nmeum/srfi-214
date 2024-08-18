@@ -5,7 +5,7 @@
  (license "MIT")
 
  (synopsis "SRFI 241: Flexvectors")
- (version "1.0.0")
+ (version "1.0.1")
  (category data)
  (component-options (csc-options "-d3" "-O3" "-X" "r7rs" "-R" "r7rs"))
  (test-dependencies srfi-64)
