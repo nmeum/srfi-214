@@ -101,7 +101,13 @@
     (assume (<= start end))
     (vector-copy! (vec fv) start (vec fv) end)
     (let ((new-len (- len (- end start))))
-      (vector-fill! (vec fv) #f new-len len)
+      ;; Workaround a discrepancy in the implementation of vector-fill!
+      ;; between R7RS and SRFI-133: R7RS doesn't error out on an empty
+      ;; fill for the last vector element while SRFI-133 emits an error.
+      ;;
+      ;; See: http://paste.call-cc.org/paste?id=17238d2150d633b4053fc9dd0ce52ecd7c3b4f85
+      (unless (eqv? start end)
+        (vector-fill! (vec fv) #f new-len len))
       (set-flexvector-length! fv new-len)))
   fv)
 
