@@ -4,7 +4,7 @@
  ;; https://srfi.schemers.org/srfi-214/srfi-214.html#copyright
  (license "MIT")
 
- (synopsis "SRFI 241: Flexvectors")
+ (synopsis "SRFI 214: Flexvectors")
  (version "1.0.1")
  (category data)
  (test-dependencies srfi-64)
